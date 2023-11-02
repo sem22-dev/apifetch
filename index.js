@@ -20,7 +20,7 @@ app.post('/', async (req, res) => {
   try {
     console.log('Received request:', req.method, req.url);
 
-    const { channelName, email, title, tags, visibility, name } = req.body;
+    const { channelName, email, title, tags, visibility, name, thumbnail } = req.body;
     const copiedChannelName = name;
     console.log('Received channel name:', channelName);
     console.log('Received title', title);
@@ -35,6 +35,7 @@ app.post('/', async (req, res) => {
       title,
       tags,
       visibility,
+      thumbnail
     };
 
     const logData = {
